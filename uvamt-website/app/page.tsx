@@ -13,7 +13,7 @@ export default function Home() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">About</h2>
           <p>
-            The 1st University Of Virginia Math Tournament (UVAMT) will be held on <span className="font-medium">Saturday, April 19</span> at the University of Virginia. This event will bring together talented students from across the region to tackle fun and challenging math problems.
+            The 1st University Of Virginia Math Tournament (UVAMT) will be held on <span className="font-medium">Saturday, April 19</span> at the University of Virginia. UVAMT brings together talented students from across the region to tackle fun and challenging math problems.
           </p>
         </section>
 
@@ -23,7 +23,9 @@ export default function Home() {
             Registration is <span className="font-medium">open</span>! Team members may register using the following form.
           </p>
           <div className="text-center">
-            <Link href="/register" className="inline-block bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors">
+            <Link href="/register" className="inline-block relative px-6 py-3 font-bold text-white rounded-lg transition duration-300 
+                   bg-gradient-to-r from-blue-600 to-blue-500 
+                   hover:from-blue-800 hover:to-blue-700">
               Register Now
             </Link>
           </div>
@@ -60,7 +62,7 @@ export default function Home() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-          <p>Contact information will be posted soon.</p>
+          <p><a href="mailto:math_tournament@virginia.edu"><u>math_tournament@virginia.edu</u></a></p>
         </section>
       </main>
 
