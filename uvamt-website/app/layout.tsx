@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { ReactNode } from "react";
+import Image from "next/image";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +30,9 @@ export default function Layout({ children }: { children: ReactNode }) {
             <span className="text-2xl font-bold cursor-pointer">UVA Math Tournament</span>
           </Link>
           <div className="space-x-4">
-            <Link href="/apply" className="hover:underline">Apply</Link>
+            <Link href="/" className="hover:underline">Home</Link>
+            <Link href="/register" className="hover:underline">Register</Link>
+            <Link href="/faq" className="hover:underline">FAQ</Link>
             {/* <Link href="/leaderboard" className="hover:underline">Leaderboard</Link>
             <Link href="/about" className="hover:underline">About</Link> */}
           </div>
