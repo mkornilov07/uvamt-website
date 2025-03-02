@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <nav className="bg-blue-600 text-white p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/">
-            <span className="text-2xl font-bold cursor-pointer">Math Competition</span>
+            <span className="text-2xl font-bold cursor-pointer">UVA Math Tournament</span>
           </Link>
           <div className="space-x-4">
             <Link href="/apply" className="hover:underline">Apply</Link>
