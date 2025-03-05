@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <body className={geistSans.className}>
         <div className="min-h-screen flex flex-col">
           {/* Navbar */}
-          <nav className="bg-gradient-to-r from-blue-700 to-blue-500 text-white p-4 shadow-xl border border-gray-300">
+          <nav className="bg-gradient-to-r from-blue-500 to-blue-400 text-white p-4">
             <div className="container mx-auto flex justify-between items-center">
               <Link href="/">
                 <span className="text-2xl font-bold cursor-pointer">UVA Math Tournament</span>
@@ -39,6 +39,17 @@ export default function Layout({ children }: { children: ReactNode }) {
               </div>
             </div>
           </nav>
+
+          {/* Banner */}
+          <div className="relative w-full h-64">
+            <Image 
+              src="/uva_temp.jpg" // Update with your image path
+              alt="Banner Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </div>
           
           {/* Main Content */}
           <main className="flex-1 container mx-auto p-6">{children}</main>
