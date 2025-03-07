@@ -20,7 +20,7 @@ export default function Home() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Register</h2>
           <p className="mb-4">
-            Registration is <span className="font-medium">open</span>! Team members may register using the following form.
+            Registration is <span className="font-medium">open</span>! Teams may register using the following form.
           </p>
           <div className="text-center">
             <Link href="/register" className="inline-block relative px-6 py-3 font-bold text-white rounded-lg transition duration-300 
