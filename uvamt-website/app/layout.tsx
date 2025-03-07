@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import { ReactNode } from "react";
 import Image from "next/image";
+import { Analytics } from '@vercel/analytics/next';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -52,7 +53,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           </div>
           
           {/* Main Content */}
-          <main className="flex-1 container mx-auto p-6">{children}</main>
+          <main className="flex-1 container mx-auto p-6">{children}
+            <Analytics/>
+          </main>
           
           {/* Footer */}
           <footer className="bg-gray-800 text-white text-center p-4 mt-8">
