@@ -3,6 +3,7 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <link rel="icon" href="favicon.ico" sizes="any" />
 
       <header className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">1st University Of Virginia Math Tournament (UVAMT)</h1>
