@@ -1,5 +1,5 @@
 
-export default function Home() {
+export default function FAQ() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
 
@@ -29,10 +29,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="text-center text-sm text-gray-600 pt-8 border-t">
-        <p>&copy; 2025 University of Virginia Math Tournament</p>
-      </footer>
     </div>
   );
 }
