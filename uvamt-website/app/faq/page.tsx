@@ -14,6 +14,11 @@ export default function FAQ() {
           </div>
           
           <div className="mb-4">
+            <h3 className="font-medium">Q: Who is eligible?</h3>
+            <p>A: All high school students (grades 9-12) are invited. Public and private school students are welcome.</p>
+          </div>
+
+          <div className="mb-4">
             <h3 className="font-medium">Q: How many people per team?</h3>
             <p>A: Teams will consist of 6 students. However, smaller teams or individuals are also welcome to register – we will merge them into full teams.</p>
           </div>
