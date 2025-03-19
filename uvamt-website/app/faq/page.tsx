@@ -10,7 +10,7 @@ export default function FAQ() {
           
           <div className="mb-4">
             <h3 className="font-medium">Q: When/where will the contest be hosted?</h3>
-            <p>A: The contest will be hosted in Wilson Hall at the University of Virginia on April 19, 2025.</p>
+            <p>A: The contest will be hosted in Wilson Hall Room 325 at the University of Virginia on April 19, 2025.</p>
           </div>
           
           <div className="mb-4">
