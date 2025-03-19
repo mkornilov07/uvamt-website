@@ -10,7 +10,7 @@ export default function Home() {
           
           <div className="mb-4">
             <h3 className="font-medium">Q: When/where will the contest be hosted?</h3>
-            <p>A: The contest will be hosted in-person at the University of Virginia on April 19, 2025.</p>
+            <p>A: The contest will be hosted in Wilson Hall at the University of Virginia on April 19, 2025.</p>
           </div>
           
           <div className="mb-4">
@@ -26,6 +26,11 @@ export default function Home() {
           <div className="mb-4">
             <h3 className="font-medium">Q: Is there a registration fee?</h3>
             <p>A: UVAMT is free for all participants.</p>
+          </div>
+
+          <div className="mb-4">
+            <h3 className="font-medium">Q: When is the registration deadline?</h3>
+            <p>A: Participants should register by April 12, though late registrations will be accepted if there is space.</p>
           </div>
         </section>
       </main>
