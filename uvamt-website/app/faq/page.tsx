@@ -1,5 +1,5 @@
 
-export default function Home() {
+export default function FAQ() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
 
@@ -13,6 +13,11 @@ export default function Home() {
             <p>A: The contest will be hosted in Wilson Hall at the University of Virginia on April 19, 2025.</p>
           </div>
           
+          <div className="mb-4">
+            <h3 className="font-medium">Q: Who is eligible?</h3>
+            <p>A: All high school students (grades 9-12) are invited. Public and private school students are welcome.</p>
+          </div>
+
           <div className="mb-4">
             <h3 className="font-medium">Q: How many people per team?</h3>
             <p>A: Teams will consist of 6 students. However, smaller teams or individuals are also welcome to register – we will merge them into full teams.</p>
@@ -34,10 +39,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="text-center text-sm text-gray-600 pt-8 border-t">
-        <p>&copy; 2025 University of Virginia Math Tournament</p>
-      </footer>
     </div>
   );
 }
