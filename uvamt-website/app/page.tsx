@@ -62,9 +62,22 @@ export default function Home() {
         </section>
 
         <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">UVAMT 2025 Solutions</h2>
+          <div className="flex justify-center">
+            <iframe
+                src="/uvamt2025solutions.pdf"
+                width="100%"
+                height="800px"
+                className="border rounded-lg"
+            ></iframe>
+          </div>
+        </section>
+
+        <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <p><a href="mailto:math_tournament@virginia.edu"><u>math_tournament@virginia.edu</u></a></p>
         </section>
+
       </main>
 
       <footer className="text-center text-sm text-gray-600 pt-8 border-t">
