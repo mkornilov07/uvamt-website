@@ -9,7 +9,13 @@ const archive: ArchiveEntry[] = [
     {
         year: 2025,
         files: [
-            { name: "UVAMT 2025 Solutions", href: "/uvamt2025solutions.pdf" },
+            { name: "Individual Round Problems", href: "/archive/2025/individual_problems_2025.pdf" },
+            { name: "Individual Round Solutions", href: "/archive/2025/individual_solutions_2025.pdf" },
+            { name: "Team Round Problems", href: "/archive/2025/team_problems_2025.pdf" },
+            { name: "Team Round Solutions", href: "/archive/2025/team_solutions_2025.pdf" },
+            { name: "Optimization Round Problems", href: "/archive/2025/optimization_2025.pdf" },
+            { name: "Game Round Problems and Solutions", href: "/archive/2025/game_2025.pdf" },
+            { name: "Opening/Closing Ceremony", href: "/archive/2025/opening_closing_ceremony_2025.pptx" },
         ],
     },
 ];
@@ -19,7 +25,7 @@ export default function Archive() {
         <div className="max-w-4xl mx-auto px-4 py-8">
             <main>
                 <section className="mb-8">
-                    <h2 className="text-2xl font-semibold mb-6">UVAMT Problems/Solutions Archive</h2>
+                    <h2 className="text-2xl font-semibold mb-6">UVAMT Document Archive</h2>
 
                     {archive.map(({ year, files }) => (
                         <details

@@ -65,7 +65,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-4">UVAMT 2025 Solutions</h2>
           <div className="flex justify-center">
             <iframe
-                src="/uvamt2025solutions.pdf"
+                src="/archive/2025/all_solutions_2025.pdf"
                 width="100%"
                 height="800px"
                 className="border rounded-lg"
