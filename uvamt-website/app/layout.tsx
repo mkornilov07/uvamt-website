@@ -34,6 +34,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               <div className="space-x-4">
                 <Link href="/" className="hover:underline">Home</Link>
                 <Link href="/register" className="hover:underline">Register</Link>
+                <Link href="/sponsors" className="hover:underline">Sponsors</Link>
                 <Link href="/faq" className="hover:underline">FAQ</Link>
                 <Link href="/archive" className="hover:underline">Archive</Link>
                 {/* <Link href="/leaderboard" className="hover:underline">Leaderboard</Link>
