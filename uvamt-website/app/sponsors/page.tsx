@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Variants } from "framer-motion";
 import {JSX, useState} from "react";
 import React from "react";
 
@@ -20,7 +21,7 @@ const sponsors: Sponsor[] = [
     },
 ];
 
-const collapseVariants = {
+const collapseVariants: Variants = {
     closed: { height: 0, opacity: 0 },
     open: { height: "auto", opacity: 1 },
 };
@@ -28,7 +29,7 @@ const collapseVariants = {
 function SponsorRow({ sponsor }: { sponsor: Sponsor }) {
     const [open, setOpen] = useState(false);
 
-    let content: JSX.Element;
+    let content: JSX.Element | null = null;
     if (open) {
         content = (
             <motion.div
@@ -36,7 +37,7 @@ function SponsorRow({ sponsor }: { sponsor: Sponsor }) {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                variants={collapseVariants as any}
+                variants={collapseVariants}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
                 className="overflow-hidden text-center px-6"
             >
