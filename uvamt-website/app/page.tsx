@@ -1,13 +1,6 @@
-"use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, []);
-
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <link rel="icon" href="favicon.ico" sizes="any" />
