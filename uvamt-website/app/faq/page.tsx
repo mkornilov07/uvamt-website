@@ -32,6 +32,11 @@ export default function FAQ() {
             <h3 className="font-medium">Q: Is there a registration fee?</h3>
             <p>A: UVAMT is free for all participants.</p>
           </div>
+
+          <div className="mb-4">
+            <h3 className="font-medium">Q: When is the registration deadline?</h3>
+            <p>A: Participants should register by April 12, though late registrations will be accepted if there is space.</p>
+          </div>
         </section>
       </main>
     </div>
