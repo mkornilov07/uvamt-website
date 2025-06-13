@@ -10,7 +10,7 @@ export default function FAQ() {
           
           <div className="mb-4">
             <h3 className="font-medium">Q: When/where will the contest be hosted?</h3>
-            <p>A: The contest will be hosted in-person at the University of Virginia on April 19, 2025.</p>
+            <p>A: The contest will be hosted in-person at the University of Virginia around March/April.</p>
           </div>
           
           <div className="mb-4">
@@ -24,8 +24,8 @@ export default function FAQ() {
           </div>
 
           <div className="mb-4">
-            <h3 className="font-medium">Q: Are there prizes for winning?</h3>
-            <p>A: We will award certificates and some other small prizes - stay tuned!</p>
+            <h3 className="font-medium">Q: Are there prizes?</h3>
+            <p>A: Yes! You can expect fun puzzles and books as prizes.</p>
           </div>
 
           <div className="mb-4">
