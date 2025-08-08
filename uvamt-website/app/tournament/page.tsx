@@ -3,6 +3,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { schedule } from "@/data/schedule";
 
 export default function Tournament() {
     return (
@@ -126,25 +127,14 @@ export default function Tournament() {
                                 Schedule Outline
                             </h2>
                             <div className="bg-white shadow rounded divide-y divide-gray-200">
-                                {[
-                                    ["9:00 AM", "Check-In"],
-                                    ["10:00 AM", "Opening Ceremony"],
-                                    ["10:30 AM", "Team Round"],
-                                    ["11:15 AM", "Optimization Round"],
-                                    ["11:55 AM", "Lunch"],
-                                    ["1:10 PM", "Individual Round"],
-                                    ["2:20 PM", "Game Round"],
-                                    ["3:00 PM", "Awards & Closing Ceremony"],
-                                ].map(([time, activity], idx) => (
+                                {schedule.map(({ time, activity }, idx) => (
                                     <div
                                         key={time}
                                         className={`flex items-center gap-x-4 px-6 py-4 ${
                                             idx % 2 === 0 ? "bg-gray-50" : "bg-white"
                                         }`}
                                     >
-                    <span className="w-24 font-medium text-blue-600">
-                      {time}
-                    </span>
+                                        <span className="w-24 font-medium text-blue-600">{time}</span>
                                         <span className="text-gray-800">{activity}</span>
                                     </div>
                                 ))}
@@ -152,6 +142,7 @@ export default function Tournament() {
                         </div>
                     </div>
                 </motion.section>
+
             </div>
         </>
     );

@@ -4,11 +4,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { schedule } from "@/data/schedule";
+import { sponsors } from "@/data/sponsors";
 
-const sponsors = [
-    { name: "Sponsor 1", logo: "/sponsors/mathdash_logo.png" },
-    { name: "Sponsor 2", logo: "/sponsors/uva_math_logo.png" },
-];
 
 export default function HomePage() {
     return (
@@ -267,15 +265,7 @@ export default function HomePage() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        {[
-                            ["8:30 AM", "Check-In"],
-                            ["9:30 AM", "Welcome & Opening Ceremony"],
-                            ["10:00 AM", "Team Round"],
-                            ["11:00 AM", "Individual Round"],
-                            ["12:30 PM", "Lunch Break"],
-                            ["1:30 PM", "Game Round"],
-                            ["2:30 PM", "Awards Ceremony"],
-                        ].map(([time, activity], idx) => (
+                        {schedule.map(({ time, activity }, idx) => (
                             <motion.div
                                 key={time}
                                 className={`flex items-center gap-x-4 px-6 py-4 ${
@@ -363,7 +353,7 @@ export default function HomePage() {
                     }}
                     viewport={{ once: true }}
                 >
-                    {sponsors.map(({ name, logo }) => (
+                    {sponsors.map(({ name, logoSrc }) => (
                         <motion.div
                             key={name}
                             className="flex justify-center"
@@ -374,7 +364,7 @@ export default function HomePage() {
                         >
                             <Link href="/sponsors" className="block transform hover:scale-105 transition">
                                 <Image
-                                    src={logo}
+                                    src={logoSrc}
                                     alt={`${name} logo`}
                                     width={150}
                                     height={80}
