@@ -1,71 +1,133 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import "./globals.css";
+// app/layout.tsx
+"use client";
+
+import React, { ReactNode, useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { ReactNode } from "react";
 import Image from "next/image";
-import { Analytics } from '@vercel/analytics/next';
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { usePathname } from "next/navigation";
+import "./globals.css";
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/tournament", label: "Tournament" },
+    { href: "/register", label: "Register" },
+    { href: "/sponsors", label: "Sponsors" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/archive", label: "Archive" },
+];
 
-export const metadata: Metadata = {
-  title: "UVAMT",
-  description: "",
-};
+export default function RootLayout({ children }: { children: ReactNode }) {
+    const [fillRatio, setFillRatio] = useState(0);
+    const [isAtTop, setIsAtTop] = useState(true);
+    const navRef = useRef<HTMLElement>(null);
+    const pathname = usePathname();
 
-export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <html className={geistSans.className}>
-      <body className={geistSans.className}>
-        <div className="min-h-screen flex flex-col">
-          {/* Navbar */}
-          <nav className="bg-gradient-to-r from-blue-500 to-blue-400 text-white p-4">
-            <div className="container mx-auto flex justify-between items-center">
-              <Link href="/">
-                <span className="text-2xl font-bold cursor-pointer">UVA Math Tournament</span>
-              </Link>
-              <div className="space-x-4">
-                <Link href="/" className="hover:underline">Home</Link>
-                <Link href="/register" className="hover:underline">Register</Link>
-                <Link href="/sponsors" className="hover:underline">Sponsors</Link>
-                <Link href="/faq" className="hover:underline">FAQ</Link>
-                <Link href="/archive" className="hover:underline">Archive</Link>
-                {/* <Link href="/leaderboard" className="hover:underline">Leaderboard</Link>
-                <Link href="/about" className="hover:underline">About</Link> */}
-              </div>
+    useEffect(() => {
+        const banner = document.getElementById("page-banner");
+        const navEl = navRef.current;
+        if (!banner || !navEl) return;
+
+        const bannerHeight = banner.offsetHeight;
+        const navHeight = navEl.offsetHeight;
+        const startScroll = bannerHeight - navHeight;
+
+        const onScroll = () => {
+            const scrollY = window.scrollY;
+            setIsAtTop(scrollY === 0);
+
+            const offset = scrollY - startScroll;
+            const ratio = Math.min(Math.max(offset / navHeight, 0), 1);
+            setFillRatio(ratio);
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    const stopPct = fillRatio * 100;
+    const navStyle: React.CSSProperties = {
+        backgroundImage: `linear-gradient(
+      to top,
+      oklch(.623 .214 259.815) ${stopPct}%,
+      transparent ${stopPct}%
+    )`,
+    };
+
+    return (
+        <html lang="en">
+        <body className="flex flex-col min-h-screen antialiased">
+        <nav
+            ref={navRef}
+            style={navStyle}
+            className="fixed inset-x-0 top-0 z-50"
+        >
+            <div className="flex items-center justify-between px-6 py-4">
+                {/* Logo side */}
+                <motion.div
+                    initial={false}
+                    animate={
+                        isAtTop
+                            ? { scale: 1.50, x: "2.5%", y: "2.5%" }
+                            : { scale: 1, x: "0%", y: "0%" }
+                    }
+                    style={{ transformOrigin: "center" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/layout/uva_math.png"
+                            alt="UVA Math Tournament"
+                            width={45}
+                            height={45}
+                            className="object-contain"
+                            priority
+                        />
+                    </Link>
+                </motion.div>
+
+                {/* Links side */}
+                <motion.div
+                    initial={false}
+                    animate={
+                        isAtTop
+                            ? { scale: 1.07, x: "-2.5%", y: "-2.5%" }
+                            : { scale: 1, x: "0%", y: "0%" }
+                    }
+                    style={{ transformOrigin: "center" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                    <div className="hidden md:flex space-x-6">
+                        {navLinks.map(({ href, label }) => {
+                            const isActive = pathname === href;
+                            return (
+                                <Link
+                                    key={href}
+                                    href={href}
+                                    aria-current={isActive ? "page" : undefined}
+                                    className={`
+                        px-3 py-2
+                        text-sm uppercase tracking-wide
+                        transition-colors
+                        ${
+                                        isActive
+                                            ? "text-white border-b-2 border-blue-400"
+                                            : "text-white/75 hover:text-white hover:border-b-2 hover:border-blue-400"
+                                    }
+                      `}
+                                >
+                                    {label}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </motion.div>
             </div>
-          </nav>
+        </nav>
 
-          {/* Banner */}
-          <div className="relative w-full h-64">
-            <Image 
-              src="/uva_temp.jpg" // Update with your image path
-              alt="Banner Image"
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
-          </div>
-          
-          {/* Main Content */}
-          <main className="flex-1 container mx-auto p-6">{children}
-            <Analytics/>
-          </main>
-          
-          {/* Footer */}
-          <footer className="bg-gray-800 text-white text-center p-4 mt-8">
-            <p>Contact: <a href="mailto:math_tournament@virginia.edu"><u>math_tournament@virginia.edu</u></a></p>
-            <p>&copy; 2025 University of Virginia Math Tournament</p>
-          </footer>
-        </div>
-      </body>
-    </html>
-  );
+        <div className="flex-1">{children}</div>
+        </body>
+        </html>
+    );
 }
