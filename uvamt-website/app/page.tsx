@@ -383,7 +383,7 @@ export default function HomePage() {
                 <p className="text-gray-700">
                     For inquiries, please email us at {" "}
                     <a href="mailto:math_tournament@virginia.edu" className="text-blue-600 hover:underline">
-                        math_tournament@uva.edu
+                        math_tournament@virginia.edu
                     </a>
                     .
                 </p>
