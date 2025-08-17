@@ -382,7 +382,7 @@ export default function HomePage() {
                 <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
                 <p className="text-gray-700">
                     For inquiries, please email us at {" "}
-                    <a href="mailto:math_tournament@uva.edu" className="text-blue-600 hover:underline">
+                    <a href="mailto:math_tournament@virginia.edu" className="text-blue-600 hover:underline">
                         math_tournament@uva.edu
                     </a>
                     .
