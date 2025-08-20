@@ -4,11 +4,13 @@ export interface ScheduleItem {
 }
 
 export const schedule: ScheduleItem[] = [
-    { time: "8:30 AM", activity: "Check-In" },
-    { time: "9:30 AM", activity: "Welcome & Opening Ceremony" },
-    { time: "10:00 AM", activity: "Team Round" },
-    { time: "11:00 AM", activity: "Individual Round" },
-    { time: "12:30 PM", activity: "Lunch Break" },
-    { time: "1:30 PM", activity: "Game Round" },
-    { time: "2:30 PM", activity: "Awards Ceremony" },
+    { time: "9:00 AM", activity: "Check-In" },
+    { time: "10:00 AM", activity: "Opening Ceremony" },
+    { time: "10:30 AM", activity: "Team Round" },
+    { time: "11:15 AM", activity: "Optimization Round" },
+    { time: "11:55 AM", activity: "Lunch" },
+    { time: "1:10 PM", activity: "Individual Round" },
+    { time: "2:20 PM", activity: "Game Round" },
+    { time: "3:00 PM", activity: "Awards, Closing Ceremony" },
 ];
+
