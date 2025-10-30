@@ -313,7 +313,7 @@ export default function HomePage() {
                         transition={{ delay: 0.3, duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        Pre-registration is now open. Sign up below to receive direct email updates when full registration begins.
+                        Pre-registration is now open! Sign up below to receive direct email updates when full registration begins.
                     </motion.p>
                     <motion.div
                         className="text-center"
