@@ -78,7 +78,7 @@ export default function RegisterPage() {
                 >
                     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                         <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSd3O9TIiDp9xYY81jq9Fh86agvUkTHri8VnhWV8TXtixMbugQ/viewform?embedded=true"
+                            src="https://forms.gle/DFKqJPgp5PNjjW4T6"
                             width="100%"
                             height={2700}
                             frameBorder="0"

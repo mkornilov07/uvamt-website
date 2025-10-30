@@ -98,16 +98,16 @@ export default function Tournament() {
                             Register
                         </h2>
                         <p className="text-gray-700 mb-6">
-                            Registration is{" "}
-                            <span className="font-medium text-gray-900">not yet open</span>.
-                            Stay tuned for updates!
+                            Registration is expected to open November/December 2025. Pre-register below to be notified when it opens!
                         </p>
-                        <button
-                            disabled
-                            className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow opacity-50 cursor-not-allowed"
+                        <a
+                            href="https://forms.gle/xYgRcLdA2SeWVbFy5"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
                         >
-                            Coming Soon
-                        </button>
+                            Pre-Register Now
+                        </a>
                     </div>
                 </motion.section>
 

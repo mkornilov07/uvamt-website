@@ -27,7 +27,7 @@ const faqList = [
     },
     {
         q: "When is the registration deadline?",
-        a: "Register by April 12, 2026. Late registration may be accepted if space remains.",
+        a: "We expect registration to close approximately one week before the competition. Late registration may be accepted if space remains.",
     },
 ];
 
