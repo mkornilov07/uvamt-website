@@ -7,11 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqList = [
     {
         q: "When and where will the contest be hosted?",
-        a: "The contest will be hosted in person at the University of Virginia during March–April 2026 on UVA’s historic grounds.",
+        a: "The contest will be hosted in person at the University of Virginia on March 14, 2026 on UVA’s historic grounds.",
     },
     {
         q: "Who is eligible?",
-        a: "All high school students (grades 9–12), public or private, are welcome to register.",
+        a: "All high school students (grades 9–12), public or private, are welcome to register. UVAMT problems are designed for a high school competition audience, but students in grades 7-8 with exceptional math ability may also register.",
     },
     {
         q: "How many people per team?",
@@ -27,7 +27,7 @@ const faqList = [
     },
     {
         q: "When is the registration deadline?",
-        a: "We expect registration to close approximately one week before the competition. Late registration may be accepted if space remains.",
+        a: "Registration closes February 21, 2026. Late registration may be accepted if space remains.",
     },
 ];
 

@@ -313,7 +313,7 @@ export default function HomePage() {
                         transition={{ delay: 0.3, duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        Pre-registration is now open! Sign up below to receive direct email updates when full registration begins.
+                        Registration is now open! Sign up by February 21, 2026.
                     </motion.p>
                     <motion.div
                         className="text-center"
@@ -324,12 +324,12 @@ export default function HomePage() {
                     >
                       
                       <a
-                          href="https://forms.gle/xYgRcLdA2SeWVbFy5"
+                          href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-block px-10 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
                       >
-                          Pre-Register Now
+                          Register Now
                       </a>
                     </motion.div>
                 </motion.div>

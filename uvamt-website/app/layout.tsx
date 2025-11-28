@@ -10,7 +10,6 @@ import "./globals.css";
 
 const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/tournament", label: "Tournament" },
     { href: "/register", label: "Register" },
     { href: "/sponsors", label: "Sponsors" },
     { href: "/faq", label: "FAQ" },
