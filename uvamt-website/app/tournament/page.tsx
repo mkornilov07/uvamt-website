@@ -31,7 +31,7 @@ export default function Tournament() {
                         transition={{duration: 1, ease: "easeInOut", delay: 0.2}}
                         viewport={{once: true}}
                     >
-                        March/April 2026
+                        Saturday, March 14, 2026
                     </motion.p>
                 </div>
             </div>
@@ -75,7 +75,8 @@ export default function Tournament() {
                         transition={{ duration: 0.6 }}
                     >
                         The 2nd annual University of Virginia Math Tournament (UVAMT) will be
-                        held spring 2026 on UVA’s historic grounds. Students from across the
+                        held on March 14, 2026 on UVA’s historic grounds. 
+                        Students from across the
                         region will compete in team and individual rounds to solve challenging
                         problems, collaborate with peers, and showcase their mathematical
                         talents.
@@ -98,15 +99,15 @@ export default function Tournament() {
                             Register
                         </h2>
                         <p className="text-gray-700 mb-6">
-                            Registration is expected to open November/December 2025. Pre-register below to be notified when it opens!
+                            Registration is open! Sign up by February 21, 2026 to secure your spot.
                         </p>
                         <a
-                            href="https://forms.gle/xYgRcLdA2SeWVbFy5"
+                            href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
                         >
-                            Pre-Register Now
+                            Register Now
                         </a>
                     </div>
                 </motion.section>
