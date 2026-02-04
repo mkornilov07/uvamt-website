@@ -10,14 +10,14 @@ import { sponsors } from "@/data/sponsors";
 
 export default function HomePage() {
     return (
-        <>
+        <div className="overflow-x-hidden">
             {/* Banner with parallax background */}
             <div
                 id="page-banner"
                 className="
           relative
           w-full
-          h-80 md:h-96 lg:h-[500px]
+          h-screen
           bg-fixed bg-center bg-cover
         "
                 style={{ backgroundImage: "url('/home/uva.jpg')" }}
@@ -72,7 +72,7 @@ export default function HomePage() {
                     visible: { transition: { staggerChildren: 0.2 } },
                 }}
             >
-                <div className="text-center max-w-3xl mx-auto py-12">
+                <div className="text-center max-w-3xl mx-auto py-12 px-4">
                     <motion.h2
                         className="text-3xl font-semibold mb-4 text-white"
                         variants={{
@@ -95,14 +95,14 @@ export default function HomePage() {
                         to compete in a variety of challenging rounds, including team, individual, and
                         fast-paced game-style competitions. Participants will test their problem-solving
                         skills, collaborate with peers, and enjoy a day of intellectual excitement on
-                        UVA’s historic grounds.
+                        UVA's historic grounds.
                     </motion.p>
                 </div>
             </motion.section>
 
 
             {/* Highlights (zippered layout: image-right, image-left, image-right) */}
-            <section id="highlights" className="py-12">
+            <section id="highlights" className="py-12 px-4">
                 {[
                     {
                         title: "Collaborate",
@@ -289,7 +289,7 @@ export default function HomePage() {
 
 
             {/* Secure Your Spot */}
-            <section id="register" className="py-12 bg-gray-50">
+            <section id="register" className="py-12 bg-gray-50 px-4">
                 <motion.div
                     className="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-8 space-y-6"
                     initial={{ opacity: 0, y: 20 }}
@@ -322,21 +322,21 @@ export default function HomePage() {
                         transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
                         viewport={{ once: true }}
                     >
-                      
-                      <a
-                          href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block px-10 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
-                      >
-                          Register Now
-                      </a>
+
+                        <a
+                            href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block px-10 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
+                        >
+                            Register Now
+                        </a>
                     </motion.div>
                 </motion.div>
             </section>
 
             {/* Sponsors */}
-            <section id="sponsors" className="py-12 bg-white">
+            <section id="sponsors" className="py-12 bg-white px-4">
                 <motion.h2
                     className="text-3xl font-semibold mb-6 text-center text-gray-900"
                     initial={{ opacity: 0, y: 20 }}
@@ -381,7 +381,7 @@ export default function HomePage() {
 
 
             {/* Contact */}
-            <section id="contact" className="max-w-lg mx-auto text-center py-12">
+            <section id="contact" className="max-w-lg mx-auto text-center py-12 px-4">
                 <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
                 <p className="text-gray-700">
                     For inquiries, please email us at {" "}
@@ -393,9 +393,9 @@ export default function HomePage() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-gray-300 py-6 text-center">
+            <footer className="bg-gray-900 text-gray-300 py-6 text-center px-4">
                 <p>&copy; 2026 University of Virginia Math Tournament</p>
             </footer>
-        </>
+        </div>
     );
 }

@@ -93,7 +93,7 @@ export default function ArchivePage() {
             {/* Banner with parallax background */}
             <div
                 id="page-banner"
-                className="relative w-full h-80 md:h-96 lg:h-[500px] bg-fixed bg-center bg-cover"
+                className="relative w-full h-screen bg-fixed bg-center bg-cover"
                 style={{ backgroundImage: "url('/archive/uva.jpg')" }}
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/80 flex flex-col justify-center items-center text-center px-4">

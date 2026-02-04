@@ -11,7 +11,7 @@ export default function RegisterPage() {
             {/* Banner */}
             <div
                 id="page-banner"
-                className="relative w-full h-80 md:h-96 lg:h-[500px] bg-fixed bg-center bg-cover"
+                className="relative w-full h-80 h-screen bg-fixed bg-center bg-cover"
                 style={{ backgroundImage: "url('/register/uva.jpg')" }}
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 flex flex-col justify-center items-center text-center px-4">

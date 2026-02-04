@@ -12,6 +12,7 @@ const navLinks = [
     { href: "/", label: "Home" },
     { href: "/register", label: "Register" },
     { href: "/sponsors", label: "Sponsors" },
+    { href: "/team", label: "Team" },
     { href: "/faq", label: "FAQ" },
     { href: "/archive", label: "Archive" },
 ];
@@ -27,13 +28,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         const navEl = navRef.current;
         if (!banner || !navEl) return;
 
-        const bannerHeight = banner.offsetHeight;
-        const navHeight = navEl.offsetHeight;
-        const startScroll = bannerHeight - navHeight;
-
         const onScroll = () => {
             const scrollY = window.scrollY;
             setIsAtTop(scrollY === 0);
+
+            // Calculate banner height dynamically (now 100vh)
+            const bannerHeight = window.innerHeight;
+            const navHeight = navEl.offsetHeight;
+            const startScroll = bannerHeight - navHeight;
 
             const offset = scrollY - startScroll;
             const ratio = Math.min(Math.max(offset / navHeight, 0), 1);
@@ -41,8 +43,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         };
 
         window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true }); // Add resize listener
         onScroll();
-        return () => window.removeEventListener("scroll", onScroll);
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            window.removeEventListener("resize", onScroll);
+        };
     }, []);
 
     const stopPct = fillRatio * 100;
