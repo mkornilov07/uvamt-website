@@ -95,7 +95,7 @@ export default function HomePage() {
                         to compete in a variety of challenging rounds, including team, individual, and
                         fast-paced game-style competitions. Participants will test their problem-solving
                         skills, collaborate with peers, and enjoy a day of intellectual excitement on
-                        UVA's historic grounds.
+                        UVA&apos;s historic grounds.
                     </motion.p>
                 </div>
             </motion.section>
