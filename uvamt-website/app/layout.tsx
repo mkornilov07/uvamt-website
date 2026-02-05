@@ -32,8 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             const scrollY = window.scrollY;
             setIsAtTop(scrollY === 0);
 
-            // Calculate banner height dynamically (now 100vh)
-            const bannerHeight = window.innerHeight;
+            const bannerHeight = window.innerHeight - 80;
             const navHeight = navEl.offsetHeight;
             const startScroll = bannerHeight - navHeight;
 
