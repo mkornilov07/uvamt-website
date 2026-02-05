@@ -96,7 +96,7 @@ export default function ArchivePage() {
                 className="relative w-full h-[calc(100vh-80px)] bg-fixed bg-center bg-cover"
                 style={{ backgroundImage: "url('/archive/uva.jpg')" }}
             >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/80 flex flex-col justify-center items-center text-center px-4">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 flex flex-col justify-center items-center text-center px-4">
                     <motion.h1
                         className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
                         initial={{ opacity: 0, y: 30 }}

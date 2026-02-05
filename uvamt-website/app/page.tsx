@@ -24,12 +24,7 @@ export default function HomePage() {
             >
                 <div
                     className="
-            absolute inset-0
-            bg-gradient-to-b
-            from-transparent
-            via-black/10
-            to-black/60
-            flex flex-col justify-center items-center text-center px-4
+   absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 flex flex-col justify-center items-center text-center px-4
           "
                 >
                     <motion.h1
