@@ -68,7 +68,7 @@ export default function SponsorsPage() {
             {/* Banner */}
             <div
                 id="page-banner"
-                className="relative w-full h-80 h-screen bg-fixed bg-center bg-cover"
+                className="relative w-full h-80 h-[calc(100vh-80px)] bg-fixed bg-center bg-cover"
                 style={{
                     backgroundImage: "url('/sponsors/uva.jpg')",
                     backgroundPosition: "center 100%",

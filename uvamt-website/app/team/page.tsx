@@ -52,6 +52,12 @@ function TeamRow({ member }: { member: TeamMember }) {
                 </p>
 
                 <div className="mt-5 h-[3px] w-20 bg-blue-600" />
+
+                {member.bio && (
+                    <p className="mt-5 text-base text-gray-700 leading-relaxed">
+                        {member.bio}
+                    </p>
+                )}
             </motion.div>
         </motion.div>
     );
@@ -64,7 +70,7 @@ export default function TeamPage() {
         <>
             <div
                 id="page-banner"
-                className="relative w-full h-screen bg-fixed bg-center bg-cover"
+                className="relative w-full h-[calc(100vh-80px)] bg-fixed bg-center bg-cover"
                 style={{
                     backgroundImage: "url('/team/uva.jpg')",
                     backgroundPosition: "50% 100%",
@@ -130,7 +136,7 @@ export default function TeamPage() {
                         }}
                         transition={{duration: 0.6}}
                     >
-                    UVAMT is lead by a group of passionate UVA Math students who are dedicated to providing a fun and competitive experience to high school students interested in mathematics.
+                        UVAMT is lead by a group of passionate UVA Math students who are dedicated to providing a fun and competitive experience to high school students interested in mathematics.
                     </motion.p>
                 </div>
             </motion.section>

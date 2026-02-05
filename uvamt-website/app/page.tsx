@@ -17,7 +17,7 @@ export default function HomePage() {
                 className="
           relative
           w-full
-          h-screen
+          h-[calc(100vh-80px)]
           bg-fixed bg-center bg-cover
         "
                 style={{ backgroundImage: "url('/home/uva.jpg')" }}

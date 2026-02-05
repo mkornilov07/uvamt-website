@@ -39,7 +39,7 @@ export default function FAQPage() {
             {/* Banner */}
             <div
                 id="page-banner"
-                className="relative w-full h-screen bg-fixed bg-cover"
+                className="relative w-full h-[calc(100vh-80px)] bg-fixed bg-cover"
                 style={{
                     backgroundImage: "url('/faq/uva.jpg')",
                     backgroundPosition: "50% 40%",
