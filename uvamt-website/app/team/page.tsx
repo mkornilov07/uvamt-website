@@ -67,7 +67,7 @@ export default function TeamPage() {
                 className="relative w-full h-screen bg-fixed bg-center bg-cover"
                 style={{
                     backgroundImage: "url('/team/uva.jpg')",
-                    backgroundPosition: "50% 35%",
+                    backgroundPosition: "50% 100%",
                 }}
             >
                 <div
