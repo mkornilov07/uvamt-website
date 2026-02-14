@@ -68,14 +68,14 @@ export default function SponsorsPage() {
             {/* Banner */}
             <div
                 id="page-banner"
-                className="relative w-full h-80 md:h-96 lg:h-[500px] bg-fixed bg-center bg-cover"
+                className="relative w-full h-80 h-[calc(100vh-80px)] bg-fixed bg-center bg-cover"
                 style={{
                     backgroundImage: "url('/sponsors/uva.jpg')",
-                    backgroundPosition: "center 120%",
+                    backgroundPosition: "center 100%",
                 }}
             >
                 <div
-                    className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/80 flex flex-col justify-center items-center text-center px-4">
+                    className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 flex flex-col justify-center items-center text-center px-4">
                     <motion.h1
                         className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2"
                         initial={{opacity: 0, y: 30}}

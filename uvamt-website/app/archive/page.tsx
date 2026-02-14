@@ -93,10 +93,10 @@ export default function ArchivePage() {
             {/* Banner with parallax background */}
             <div
                 id="page-banner"
-                className="relative w-full h-80 md:h-96 lg:h-[500px] bg-fixed bg-center bg-cover"
+                className="relative w-full h-[calc(100vh-80px)] bg-fixed bg-center bg-cover"
                 style={{ backgroundImage: "url('/archive/uva.jpg')" }}
             >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/80 flex flex-col justify-center items-center text-center px-4">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 flex flex-col justify-center items-center text-center px-4">
                     <motion.h1
                         className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
                         initial={{ opacity: 0, y: 30 }}
@@ -125,7 +125,7 @@ export default function ArchivePage() {
             />
 
             {/* Archive Entries */}
-            <div className="max-w-4xl mx-auto px-4 py-12 space-y-6">
+            <div className="max-w-4xl mx-auto px-4 py-12 pb-64 space-y-6">
                 {archive.map((entry) => (
                     <YearArchive key={entry.year} entry={entry} />
                 ))}
