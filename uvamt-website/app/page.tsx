@@ -351,26 +351,32 @@ export default function HomePage() {
                     }}
                     viewport={{ once: true }}
                 >
-                    {sponsors.map(({ name, logoSrc }) => (
-                        <motion.div
-                            key={name}
-                            className="flex justify-center"
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            viewport={{ once: true }}
-                        >
-                            <Link href="/sponsors" className="block transform hover:scale-105 transition">
-                                <Image
-                                    src={logoSrc}
-                                    alt={`${name} logo`}
-                                    width={150}
-                                    height={80}
-                                    className="object-contain"
-                                />
-                            </Link>
-                        </motion.div>
-                    ))}
+                    { sponsors.map(({ name, logoSrc }, index) => {
+                        const isLast = index === sponsors.length - 1
+                        const isOdd = sponsors.length % 2 !== 0
+                        const shouldCenterLast = isLast && isOdd
+
+                        return (
+                            <motion.div
+                                key={name}
+                                className={`flex justify-center ${shouldCenterLast ? "sm:col-span-2" : ""}`}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                <Link href="/sponsors" className="block transform hover:scale-105 transition">
+                                    <Image
+                                        src={logoSrc}
+                                        alt={`${name} logo`}
+                                        width={150}
+                                        height={80}
+                                        className="object-contain mx-auto"
+                                    />
+                                </Link>
+                            </motion.div>
+                        )
+                    })}
                 </motion.div>
             </section>
 
