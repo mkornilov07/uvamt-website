@@ -308,7 +308,7 @@ export default function HomePage() {
                         transition={{ delay: 0.3, duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        Registration is now open! Sign up by February 21, 2026.
+                        On-time registration closed on February 21, 2026. Late registration will be open until February 28, 2026.
                     </motion.p>
                     <motion.div
                         className="text-center"

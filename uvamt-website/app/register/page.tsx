@@ -99,7 +99,7 @@ export default function RegisterPage() {
                             Register
                         </h2>
                         <p className="text-gray-700 mb-6">
-                            Registration is open! Sign up by February 21, 2026 to secure your spot.
+                            On-time registration closed on February 21, 2026. Late registration will be open until February 28, 2026.
                         </p>
                         <a
                             href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
