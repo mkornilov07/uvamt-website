@@ -15,7 +15,11 @@ const faqList = [
     },
     {
         q: "How many people per team?",
-        a: "Teams consist of up to 6 students. Smaller teams or individuals are welcome and will be grouped to form full teams.",
+        a: "Teams consist of up to 6 students. Smaller teams and individuals are welcome and will be merged to form full teams. If your team prefers not to be merged, simply indicate this on your registration form.",
+    },
+    {
+        q: "What happens if a team member can no longer attend?",
+        a: "No problem! You can update your registration at any time using the edit link provided in your confirmation email. You can also email us directly and we'll be happy to help."
     },
     {
         q: "Are there prizes?",
