@@ -12,5 +12,6 @@ export const schedule: ScheduleItem[] = [
     { time: "1:15 PM", activity: "Optimization Round" },
     { time: "2:10 PM", activity: "Game Round" },
     { time: "3:00 PM", activity: "Awards, Closing Ceremony" },
+    { time: "4:30 PM", activity: "Event Ends" },
 ];
 
