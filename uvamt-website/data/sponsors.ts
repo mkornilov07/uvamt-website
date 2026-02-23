@@ -6,6 +6,12 @@ export interface Sponsor {
 
 export const sponsors: Sponsor[] = [
     {
+        name: "SPARC",
+        logoSrc: "/sponsors/sparc.png",
+        blurb:
+            "A free program for talented high schoolers to develop quantitative skills and apply them to the world."
+    },
+    {
         name: "UVA Math",
         logoSrc: "/sponsors/uva_math_logo.png",
         blurb:
