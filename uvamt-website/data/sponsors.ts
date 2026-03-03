@@ -24,10 +24,17 @@ export const sponsors: Sponsor[] = [
     },
     {
         name: "SPARC",
-        logoSrc: "/sponsors/sparc.png",
+        logoSrc: "/sponsors/sparc_logo.png",
         tier: "bronze",
         blurb:
-            "A free program for talented high schoolers to develop quantitative skills and apply them to the world."
+            "SPARC is a free program for talented high schoolers to develop quantitative skills and apply them to the world."
+    },
+    {
+        name: "Athemath",
+        logoSrc: "/sponsors/athemath_logo.png",
+        tier: "bronze",
+        blurb:
+            "Athemath is a nonprofit whose mission is to both provide high-quality, low-cost contest math classes for ambitious girls as well as create a community of math girls, from all levels of success, age, and experience, that can support each other on their math journey."
     },
     {
         name: "UVA Math",
