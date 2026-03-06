@@ -4,6 +4,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { schedule } from "@/data/schedule";
+import { getRegistrationContent } from "@/data/registration";
 
 export default function RegisterPage() {
     return (
@@ -94,22 +95,34 @@ export default function RegisterPage() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
-                    <div className="bg-white shadow-lg rounded-lg p-8">
-                        <h2 className="text-3xl font-semibold mb-4 text-gray-900">
-                            Register
-                        </h2>
-                        <p className="text-gray-700 mb-6">
-                            On-time registration closed on February 21, 2026. Late registration will be open until February 28, 2026.
-                        </p>
-                        <a
-                            href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
-                        >
-                            Register Now
-                        </a>
-                    </div>
+                    {(() => {
+                        const reg = getRegistrationContent();
+
+                        return (
+                            <div className="bg-white shadow-lg rounded-lg p-8">
+                                <h2 className="text-3xl font-semibold mb-4 text-gray-900">
+                                    {reg.title}
+                                </h2>
+
+                                <p className="text-gray-700 mb-6">{reg.description}</p>
+
+                                {reg.mode === "open" ? (
+                                    <a
+                                        href={reg.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition inline-block"
+                                    >
+                                        {reg.buttonLabel}
+                                    </a>
+                                ) : (
+                                    <span className="px-7 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg inline-block">
+                                        {reg.buttonLabel}
+                                    </span>
+                                )}
+                            </div>
+                        );
+                    })()}
                 </motion.section>
 
                 {/* Schedule Section */}

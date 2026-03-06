@@ -10,7 +10,8 @@ export const team: TeamMember[] = [
     { name: "Mikhail Kornilov", role: "Coordinator", imageSrc: "/team/mikhail_kornilov.jpg", bio: "" },
     { name: "Utkarsh Goyal", role: "Coordinator", imageSrc: "/team/utkarsh_goyal.jpg" , bio:""},
     { name: "Emma Ylagan", role: "Social Media Manager", imageSrc: "/team/emma_ylagan.jpg" , bio:""},
-    { name: "Isaac Assink", role: "Volunteer", imageSrc: "/team/isaac_assink.jpg" , bio:""},
+    { name: "Isaac Assink", role: "Secretary", imageSrc: "/team/isaac_assink.jpg" , bio:""},
+    { name: "Liam Baird", role: "Outreach Manager", imageSrc: "/team/liam_baird.jpg", bio:""},
     { name: "Brendan Malaugh", role: "Web Developer", imageSrc: "/team/brendan_malaugh.jpg" , bio:""},
-    { name: "Eric Zeng", role: "Artist", imageSrc: "/team/eric_zeng.jpg", bio: ""}
+    { name: "Eric Zeng", role: "Design Director", imageSrc: "/team/eric_zeng.jpg", bio: ""}
 ];
