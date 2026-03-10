@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { schedule } from "@/data/schedule";
 import { sponsors } from "@/data/sponsors";
+import { getRegistrationContent } from "@/data/registration";
 
 
 export default function HomePage() {
@@ -281,8 +282,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-
-
             {/* Secure Your Spot */}
             <section id="register" className="py-12 bg-gray-50 px-4">
                 <motion.div
@@ -292,41 +291,56 @@ export default function HomePage() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <motion.h2
-                        className="text-3xl font-semibold text-center text-gray-900"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        Secure Your Spot
-                    </motion.h2>
-                    <motion.p
-                        className="text-gray-700 text-center"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        On-time registration closed on February 21, 2026. Late registration will be open until February 28, 2026.
-                    </motion.p>
-                    <motion.div
-                        className="text-center"
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
-                        viewport={{ once: true }}
-                    >
+                    {(() => {
+                        const reg = getRegistrationContent();
 
-                        <a
-                            href="https://forms.gle/9zDSLsvp2Hu9XgFWA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block px-10 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
-                        >
-                            Register Now
-                        </a>
-                    </motion.div>
+                        return (
+                            <>
+                                <motion.h2
+                                    className="text-3xl font-semibold text-center text-gray-900"
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    viewport={{ once: true }}
+                                >
+                                    {reg.title}
+                                </motion.h2>
+
+                                <motion.p
+                                    className="text-gray-700 text-center"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ delay: 0.3, duration: 0.6 }}
+                                    viewport={{ once: true }}
+                                >
+                                    {reg.description}
+                                </motion.p>
+
+                                <motion.div
+                                    className="text-center"
+                                    initial={{ scale: 0.9, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
+                                    viewport={{ once: true }}
+                                >
+                                    {reg.href ? (
+                                        <a
+                                            href={reg.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-block px-10 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition"
+                                        >
+                                            {reg.buttonLabel}
+                                        </a>
+                                    ) : (
+                                        <span className="inline-block px-10 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg">
+                                            {reg.buttonLabel}
+                                        </span>
+                                    )}
+                                </motion.div>
+                            </>
+                        );
+                    })()}
                 </motion.div>
             </section>
 

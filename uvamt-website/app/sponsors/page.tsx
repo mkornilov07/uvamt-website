@@ -1,7 +1,7 @@
 // app/sponsors/page.tsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Image from "next/image";
 import { Sponsor, sponsors } from "@/data/sponsors";
@@ -62,7 +62,45 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
     );
 }
 
+function TierSection({
+                         title,
+                         sponsors,
+                         accentClass,
+                     }: {
+    title: string;
+    sponsors: Sponsor[];
+    accentClass: string; // e.g. "bg-yellow-500"
+}) {
+    if (sponsors.length === 0) return null;
+
+    return (
+        <section className="mb-12">
+            <div className="text-center mb-5">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{title}</h3>
+                <div className={`mx-auto mt-2 h-1 w-20 rounded-full ${accentClass}`} />
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-8">
+                {sponsors.map((sponsor) => (
+                    <div key={sponsor.name} className="w-full sm:w-1/2">
+                        <SponsorCard sponsor={sponsor} />
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+}
+
 export default function SponsorsPage() {
+    const { gold, silver, bronze, none } = useMemo(() => {
+        return {
+            gold: sponsors.filter((s) => s.tier === "gold"),
+            silver: sponsors.filter((s) => s.tier === "silver"),
+            bronze: sponsors.filter((s) => s.tier === "bronze"),
+            none: sponsors.filter((s) => s.tier === "none"),
+        };
+    }, []);
+
     return (
         <>
             {/* Banner */}
@@ -78,19 +116,19 @@ export default function SponsorsPage() {
                     className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20 flex flex-col justify-center items-center text-center px-4">
                     <motion.h1
                         className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2"
-                        initial={{opacity: 0, y: 30}}
-                        whileInView={{opacity: 1, y: 0}}
-                        transition={{duration: 0.8}}
-                        viewport={{once: true}}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
                     >
                         Our Sponsors
                     </motion.h1>
                     <motion.p
                         className="relative inline-block overflow-hidden text-lg md:text-xl font-semibold tracking-wide text-white"
-                        initial={{clipPath: "inset(0 100% 0 0)"}}
-                        whileInView={{clipPath: "inset(0 0% 0 0)"}}
-                        transition={{duration: 1, ease: "easeInOut", delay: 0.2}}
-                        viewport={{once: true}}
+                        initial={{ clipPath: "inset(0 100% 0 0)" }}
+                        whileInView={{ clipPath: "inset(0 0% 0 0)" }}
+                        transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+                        viewport={{ once: true }}
                     >
                         Click logos to learn more.
                     </motion.p>
@@ -100,53 +138,65 @@ export default function SponsorsPage() {
             {/* Seamless header bar */}
             <div
                 className="w-full h-[32px]"
-                style={{backgroundColor: "oklch(.623 .214 259.815)"}}
+                style={{ backgroundColor: "oklch(.623 .214 259.815)" }}
             />
             <motion.section
                 id="about"
                 className="w-full"
-                style={{backgroundColor: "oklch(.673 .214 259.815)"}}
+                style={{ backgroundColor: "oklch(.673 .214 259.815)" }}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{once: true}}
+                viewport={{ once: true }}
                 variants={{
                     hidden: {},
-                    visible: {transition: {staggerChildren: 0.2}},
+                    visible: { transition: { staggerChildren: 0.2 } },
                 }}
             >
                 <div className="text-center max-w-4xl mx-auto py-12 px-4">
                     <motion.h2
                         className="text-3xl font-semibold mb-4 text-white"
                         variants={{
-                            hidden: {opacity: 0, y: 20},
-                            visible: {opacity: 1, y: 0},
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 },
                         }}
-                        transition={{duration: 0.6}}
+                        transition={{ duration: 0.6 }}
                     >
                         Thank you to all of our sponsors.
                     </motion.h2>
                     <motion.p
                         className="text-gray-200 leading-relaxed"
                         variants={{
-                            hidden: {opacity: 0, y: 20},
-                            visible: {opacity: 1, y: 0},
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 },
                         }}
-                        transition={{duration: 0.6}}
+                        transition={{ duration: 0.6 }}
                     >
                         The University of Virginia Math Tournament (UVAMT) is only possible thanks to the
                         contributions of our sponsors. We&apos;d like to give a shout-out to everyone who makes UVAMT a reality.
                     </motion.p>
                 </div>
             </motion.section>
+
             {/* Sponsors List */}
             <div className="max-w-5xl mx-auto px-4 py-12">
-                <div className="flex flex-wrap justify-center gap-8">
-                    {sponsors.map((sponsor) => (
-                        <div key={sponsor.name} className="w-full sm:w-1/2">
-                            <SponsorCard sponsor={sponsor}/>
+                <TierSection title="Gold Tier" sponsors={gold} accentClass="bg-yellow-500" />
+                <TierSection title="Silver Tier" sponsors={silver} accentClass="bg-gray-400" />
+                <TierSection title="Bronze Tier" sponsors={bronze} accentClass="bg-amber-700" />
+
+                {none.length > 0 && (
+                    <section>
+                        <div className="text-center mb-5">
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Additional Sponsors</h3>
                         </div>
-                    ))}
-                </div>
+                        <div className="flex flex-wrap justify-center gap-8">
+                            {none.map((sponsor) => (
+                                <div key={sponsor.name} className="w-full sm:w-1/2">
+                                    <SponsorCard sponsor={sponsor} />
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                )}
             </div>
         </>
     );
