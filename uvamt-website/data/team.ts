@@ -13,5 +13,6 @@ export const team: TeamMember[] = [
     { name: "Isaac Assink", role: "Secretary", imageSrc: "/team/isaac_assink.jpg" , bio:""},
     { name: "Liam Baird", role: "Outreach Manager", imageSrc: "/team/liam_baird.jpg", bio:""},
     { name: "Brendan Malaugh", role: "Web Developer", imageSrc: "/team/brendan_malaugh.jpg" , bio:""},
-    { name: "Eric Zeng", role: "Design Director", imageSrc: "/team/eric_zeng.jpg", bio: ""}
+    { name: "Eric Zeng", role: "Design Director", imageSrc: "/team/eric_zeng.jpg", bio: ""},
+    { name: 'Vrishak "Average Person" Vemuri', role: "Volunteer", imageSrc: "/team/average_person.png", bio: ""}
 ];
