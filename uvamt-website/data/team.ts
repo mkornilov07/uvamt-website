@@ -14,5 +14,7 @@ export const team: TeamMember[] = [
     { name: "Liam Baird", role: "Outreach Manager", imageSrc: "/team/liam_baird.jpg", bio:""},
     { name: "Brendan Malaugh", role: "Web Developer", imageSrc: "/team/brendan_malaugh.jpg" , bio:""},
     { name: "Eric Zeng", role: "Design Director", imageSrc: "/team/eric_zeng.jpg", bio: ""},
-    { name: 'Vrishak "Average Person" Vemuri', role: "Volunteer", imageSrc: "/team/average_person.png", bio: ""}
+    { name: 'Vrishak "Average Person" Vemuri', role: "Volunteer", imageSrc: "/team/average_person.png", bio: ""},
+    { name: 'Thomas Kennedy', role: "Volunteer", imageSrc: "/team/thomas_kennedy.png", bio: ""},
+    { name: 'Cathy Smolka', role: "Volunteer", imageSrc: "/team/cathy_smolka.jpg", bio: ""},
 ];
