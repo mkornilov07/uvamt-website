@@ -18,4 +18,5 @@ export const team: TeamMember[] = [
     { name: 'Thomas Kennedy', role: "Volunteer", imageSrc: "/team/thomas_kennedy.png", bio: ""},
     { name: 'Cathy Smolka', role: "Volunteer", imageSrc: "/team/cathy_smolka.jpg", bio: ""},
     { name: 'Alex Smith', role: "Volunteer", imageSrc: "/team/alex_smith.png", bio: ""},
+    { name: 'Nate Bryerton', role: "Volunteer", imageSrc: "/team/nate_bryerton.jpg", bio: ""},
 ];
