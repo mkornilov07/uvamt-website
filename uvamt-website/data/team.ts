@@ -19,4 +19,5 @@ export const team: TeamMember[] = [
     { name: 'Cathy Smolka', role: "Volunteer", imageSrc: "/team/cathy_smolka.jpg", bio: ""},
     { name: 'Alex Smith', role: "Volunteer", imageSrc: "/team/alex_smith.png", bio: ""},
     { name: 'Nate Bryerton', role: "Volunteer", imageSrc: "/team/nate_bryerton.jpg", bio: ""},
+    { name: 'Vasilisa Sergienko', role: "Volunteer", imageSrc: "/team/vasilisa_sergienko.jpg", bio: ""},
 ];
