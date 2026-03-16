@@ -1,4 +1,3 @@
-// app/competitions/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -171,19 +170,6 @@ export default function CompetitionsPage() {
                     <CompetitionCard key={comp.name} comp={comp} index={index} />
                 ))}
             </div>
-
-            {/* Footer nudge */}
-            <section className="max-w-lg mx-auto text-center py-10 px-4 pb-24">
-                <p className="text-gray-500 text-sm">
-                    Know a competition we should add?{" "}
-                    <a
-                        href="mailto:math_tournament@virginia.edu"
-                        className="text-blue-600 hover:underline"
-                    >
-                        Let us know.
-                    </a>
-                </p>
-            </section>
         </>
     );
 }
