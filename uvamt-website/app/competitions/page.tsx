@@ -52,18 +52,6 @@ function CompetitionCard({ comp, index }: { comp: (typeof competitions)[0]; inde
                         {comp.description}
                     </p>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-5">
-                        {comp.tags.map((tag) => (
-                            <span
-                                key={tag}
-                                className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-50 text-blue-700 border border-blue-200"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-
                     <Link
                         href={comp.website}
                         target="_blank"

@@ -6,7 +6,6 @@ export interface Competition {
     imageSrc: string;
     description: string;
     website: string;
-    tags: string[];
 }
 
 export const competitions: Competition[] = [
@@ -17,9 +16,8 @@ export const competitions: Competition[] = [
         location: "Cambridge, MA",
         imageSrc: "/competitions/hmmt.jpg",
         description:
-            "One of the most prestigious high school math competitions in the country, HMMT draws over 2,000 students to Harvard and MIT campuses each year. Featuring individual and team rounds, HMMT challenges competitors with some of the hardest problems in the competition circuit.",
+            "Founded in 1998, HMMT is one of the largest and most prestigious high school competitions in the world. Each tournament draws close to 1000 students from around the globe, including top scorers at national and international olympiads. HMMT is entirely student-organized, by students at Harvard, MIT, and nearby schools, many of whom are HMMT alumni themselves.",
         website: "https://www.hmmt.org",
-        tags: ["Team", "Individual", "Guts Round"],
     },
     {
         name: "CMIMC",
@@ -28,9 +26,8 @@ export const competitions: Competition[] = [
         location: "Pittsburgh, PA",
         imageSrc: "/competitions/cmimc.jpg",
         description:
-            "Hosted annually at Carnegie Mellon University, CMIMC features both math and computer science tracks. The competition is known for its creative, out-of-the-box problems and collaborative team rounds that reward deep mathematical thinking.",
+            "The Carnegie Mellon Informatics and Mathematics Competition (CMIMC) is an entirely student-run organization that hosts math and computer science competitions for high school students around the world.",
         website: "https://cmimc.math.cmu.edu",
-        tags: ["Team", "Individual", "CS Track"],
     },
     {
         name: "PUMaC",
@@ -39,9 +36,8 @@ export const competitions: Competition[] = [
         location: "Princeton, NJ",
         imageSrc: "/competitions/pumac.jpg",
         description:
-            "Princeton's student-run tournament brings together hundreds of competitors for a full day of math on one of the nation's most beautiful campuses. PUMaC features individual subject rounds, a team round, and a live power round with public proof presentation.",
+            "The Princeton University Mathematics Competition (PUMaC) is an annual competition run by the Princeton University Math Club. PUMaC is an entirely student-run competition; Math Club volunteers have organized PUMaC since 2006.",
         website: "https://pumac.princeton.edu",
-        tags: ["Team", "Individual", "Power Round"],
     },
     {
         name: "Duke",
@@ -50,9 +46,8 @@ export const competitions: Competition[] = [
         location: "Durham, NC",
         imageSrc: "/competitions/duke.jpg",
         description:
-            "The Duke Math Meet is a regional favorite for students in the Southeast. Hosted on Duke University's beautiful campus, it features both individual and team rounds with problems spanning a wide range of topics, making it an excellent stepping stone for newer competitors.",
+            "The Duke Math Meet (DMM) is a regional mathematics competition for high school students hosted by Duke University each year during the fall. The contest is organized by the members of the Duke University Mathematics Union (DUMU) and is sponsored by the Duke Mathematics Department.",
         website: "https://dukemathmeet.org/",
-        tags: ["Team", "Individual", "Southeast"],
     },
     {
         name: "ARML",
@@ -61,8 +56,8 @@ export const competitions: Competition[] = [
         location: "Multiple Sites Nationwide",
         imageSrc: "/competitions/arml.jpg",
         description:
-            "ARML is one of the oldest and most celebrated team math competitions in the US. Students compete as part of large regional teams across multiple simultaneous sites. The relay and team rounds make ARML a uniquely social and energetic competition experience.",
+            "\n" +
+            "ARML is one of the oldest and most celebrated team math competitions in the US. Students compete as part of large regional teams across multiple simultaneous sites. Its nationwide presence makes ARML a uniquely social and energetic competition experience.",
         website: "https://arml.com",
-        tags: ["Team", "Relay", "National"],
     },
 ];
