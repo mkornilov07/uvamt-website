@@ -1,29 +1,9 @@
-// app/archive/page.tsx
 "use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-
-interface ArchiveEntry {
-    year: number;
-    files: { name: string; href: string }[];
-}
-
-const archive: ArchiveEntry[] = [
-    {
-        year: 2025,
-        files: [
-            { name: "Individual Round Problems", href: "/archive/2025/individual_problems_2025.pdf" },
-            { name: "Individual Round Solutions", href: "/archive/2025/individual_solutions_2025.pdf" },
-            { name: "Team Round Problems", href: "/archive/2025/team_problems_2025.pdf" },
-            { name: "Team Round Solutions", href: "/archive/2025/team_solutions_2025.pdf" },
-            { name: "Optimization Round Problems", href: "/archive/2025/optimization_2025.pdf" },
-            { name: "Game Round Problems & Solutions", href: "/archive/2025/game_2025.pdf" },
-            { name: "Opening/Closing Ceremony Slides", href: "/archive/2025/opening_closing_ceremony_2025.pptx" },
-        ],
-    },
-];
+import { archive, ArchiveEntry } from "@/data/archive";
 
 const collapseVariants: Variants = {
     closed: { height: 0, opacity: 0 },
@@ -113,7 +93,7 @@ export default function ArchivePage() {
                         transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        Discover the history of UVAMT.
+                        See the problems and solutions from previous UVAMT contests.
                     </motion.p>
                 </div>
             </div>
