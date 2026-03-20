@@ -96,6 +96,28 @@ export default function HomePage() {
                 </div>
             </motion.section>
 
+            {/* Past Winners CTA */}
+            <motion.section
+                className="py-14 px-4 bg-gray-50 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+            >
+                <h2 className="text-3xl font-semibold text-gray-900 mb-3">UVAMT Winners</h2>
+                <p className="text-gray-500 mb-7 max-w-md mx-auto">
+                    See the teams and individuals who&apos;ve taken home top honors at UVAMT.
+                </p>
+                <Link
+                    href="/winners"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 hover:-translate-y-0.5 transition-all"
+                >
+                    View All Winners
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </Link>
+            </motion.section>
 
             {/* Highlights (zippered layout: image-right, image-left, image-right) */}
             <section id="highlights" className="py-12 px-4">

@@ -1,4 +1,3 @@
-// app/competitions/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -52,18 +51,6 @@ function CompetitionCard({ comp, index }: { comp: (typeof competitions)[0]; inde
                     <p className="text-gray-700 leading-relaxed text-base mb-5">
                         {comp.description}
                     </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-5">
-                        {comp.tags.map((tag) => (
-                            <span
-                                key={tag}
-                                className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-50 text-blue-700 border border-blue-200"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
 
                     <Link
                         href={comp.website}
@@ -171,19 +158,6 @@ export default function CompetitionsPage() {
                     <CompetitionCard key={comp.name} comp={comp} index={index} />
                 ))}
             </div>
-
-            {/* Footer nudge */}
-            <section className="max-w-lg mx-auto text-center py-10 px-4 pb-24">
-                <p className="text-gray-500 text-sm">
-                    Know a competition we should add?{" "}
-                    <a
-                        href="mailto:math_tournament@virginia.edu"
-                        className="text-blue-600 hover:underline"
-                    >
-                        Let us know.
-                    </a>
-                </p>
-            </section>
         </>
     );
 }
